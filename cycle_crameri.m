@@ -5,14 +5,14 @@ function cycle_crameri(ax)
 % Some dependcies in https://github.com/joelsimon/omnia.
 %
 % Input:
-% ax          Axis handle (def: gca)
+% ax       Axis handle (def: gca)
 %
 % Output:
-%             .pdfs of ax with all colormaps applied
+%          .pdfs of ax with all colormaps applied
 %
 % Ex:
-%    imagesc(peaks); ax = gca;
-%    CYCLE_CRAMERI(ax)
+%    imagesc
+%    CYCLE_CRAMERI
 %
 % Author: Joel D. Simon
 % Contact: jdsimon@alumni.princeton.edu | joeldsimon@gmail.com
@@ -20,7 +20,7 @@ function cycle_crameri(ax)
 
 defval('ax', gca)
 
-S = load(fullfile(getenv('PROGRAMS'), 'crameri', 'CrameriColourMaps8.0.mat'));
+S = load('CrameriColourMaps8.0.mat');
 cnames = fieldnames(S);
 idx = 0;
 for i = 1:length(cnames)
